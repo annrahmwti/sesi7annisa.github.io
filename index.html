@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <label for="inputText">Text Input:</label>
+    <input type="Pesan" id="inputText"><br>
+    <label for="inputNumber">Number Input:</label>
+    <input type="Berapa kali" id="inputNumber"><br>
+    <button onclick="cetak()">Cetak!</button>
+    <ol id="hasilCetak"></ol>
+
+    <script>
+        function cetak(){
+            var textValue = document.getElementById("inputText").value;
+            var numberValue = document.getElementById("inputNumber").value;
+            
+            var hasilCetak = document.getElementById("hasilCetak");
+            hasilCetak.innerHTML = ''; 
+            
+            for (var i = 1; i <= numberValue; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = textValue + ' ';
+                hasilCetak.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>
